@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code & Connexion — Le numérique à portée de tous</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- =============================================
+     NAVBAR
+     ============================================= -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+
+      <a href="#" class="nav-logo">
+        <div class="logo-badge">
+          <!-- Code icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <span class="logo-name">Code <span>&</span> Connexion</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#mission" class="nav-link">Mission</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#ateliers" class="nav-link">Ateliers</a>
+        <a href="#communaute" class="nav-link">Communauté</a>
+        <a href="#reseau" class="nav-link">Réseau</a>
+        <a href="#temoignages" class="nav-link">Témoignages</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="theme-btn" id="themeBtn" aria-label="Basculer le thème">🌙</button>
+        <a href="https://discord.gg/6H5QD84zZR" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+          Rejoindre
+          <svg class="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 8h10M9 4l4 4-4 4"/>
+          </svg>
+        </a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#mission" class="mobile-link">Mission</a>
+  <a href="#services" class="mobile-link">Services</a>
+  <a href="#ateliers" class="mobile-link">Ateliers</a>
+  <a href="#communaute" class="mobile-link">Communauté</a>
+  <a href="#reseau" class="mobile-link">Réseau</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+  <a href="https://discord.gg/6H5QD84zZR" target="_blank" style="color:var(--teal-300)">→ Discord</a>
+</div>
+
+<!-- =============================================
+     HERO
+     ============================================= -->
+<section id="hero">
+  <canvas id="particle-canvas"></canvas>
+  <div class="hero-grid"></div>
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+  <div class="hero-glow hero-glow-3"></div>
+
+  <div class="container" style="position:relative;z-index:2;width:100%">
+    <div class="hero-content">
+
+      <!-- Left -->
+      <div class="hero-left">
+        <div class="hero-eyebrow">
+          <div class="live-dot"></div>
+          <span class="hero-eyebrow-text">Association loi 1901 · Le numérique pour tous, simplement</span>
+        </div>
+
+        <h1 class="hero-title">
+          Le numérique
+          <span class="hero-title-highlight">à portée de tous</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Code & Connexion accompagne associations, citoyens et entrepreneurs dans leurs besoins numériques — avec des solutions simples, humaines et adaptées à chaque parcours de vie.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="https://discord.gg/6H5QD84zZR" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.317 4.492c-1.53-.69-3.17-1.2-4.885-1.49a.075.075 0 0 0-.079.036c-.21.369-.444.85-.608 1.23a18.566 18.566 0 0 0-5.487 0 12.36 12.36 0 0 0-.617-1.23A.077.077 0 0 0 8.562 3c-1.714.29-3.354.8-4.885 1.491a.07.07 0 0 0-.032.027C.533 9.093-.32 13.555.099 17.961a.08.08 0 0 0 .031.055 20.03 20.03 0 0 0 5.993 2.98.078.078 0 0 0 .084-.026c.462-.62.874-1.275 1.226-1.963.021-.04.001-.088-.041-.104a13.201 13.201 0 0 1-1.872-.878.075.075 0 0 1-.008-.125c.126-.093.252-.19.372-.287a.075.075 0 0 1 .078-.01c3.927 1.764 8.18 1.764 12.061 0a.075.075 0 0 1 .079.009c.12.098.245.195.372.288a.075.075 0 0 1-.006.125c-.598.344-1.22.635-1.873.877a.075.075 0 0 0-.041.105c.36.687.772 1.341 1.225 1.962a.077.077 0 0 0 .084.028 19.963 19.963 0 0 0 6.002-2.981.076.076 0 0 0 .032-.054c.5-5.094-.838-9.52-3.549-13.442a.06.06 0 0 0-.031-.028z"/>
+            </svg>
+            Rejoindre la communauté
+          </a>
+          <a href="#services" class="btn btn-ghost btn-lg">
+            Découvrir nos services
+            <svg class="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 8h10M9 4l4 4-4 4"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-num"><span class="counter" data-target="120">0</span><span class="stat-accent">+</span></div>
+            <div class="hero-stat-label">Membres actifs</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num"><span class="counter" data-target="8">0</span><span class="stat-accent">+</span></div>
+            <div class="hero-stat-label">Ateliers / mois</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num"><span class="counter" data-target="3">0</span></div>
+            <div class="hero-stat-label">Publics accompagnés</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num"><span class="counter" data-target="98">0</span><span class="stat-accent">%</span></div>
+            <div class="hero-stat-label">Satisfaction</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Visual -->
+      <div class="hero-right">
+        <div class="hero-card-cluster">
+
+          <!-- Main card -->
+          <div class="hero-main-card">
+            <div class="hmcard-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <div class="hmcard-title">Accompagnement numérique</div>
+            <div class="hmcard-desc">Des solutions adaptées à votre niveau, votre rythme et vos objectifs.</div>
+            <div class="hmcard-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Accessible à tous
+            </div>
+          </div>
+
+          <!-- Float cards -->
+          <div class="hero-float-card hero-float-1">
+            <div class="hfc-icon" style="background:rgba(0,212,200,0.15)">🎓</div>
+            <div>
+              <div class="hfc-text">Formations inclusives</div>
+              <div class="hfc-sub">Tous niveaux · Tous âges</div>
+            </div>
+          </div>
+
+          <div class="hero-float-card hero-float-2">
+            <div class="hfc-icon" style="background:rgba(87,242,135,0.15)">🤝</div>
+            <div>
+              <div class="hfc-text">Communauté bienveillante</div>
+              <div class="hfc-sub">Discord · Meetups · Projets</div>
+            </div>
+          </div>
+
+          <div class="hero-float-card hero-float-3">
+            <div class="hfc-icon" style="background:rgba(255,255,255,0.10)">⚡</div>
+            <div>
+              <div class="hfc-text">Impact immédiat</div>
+              <div class="hfc-sub">Dès le premier atelier</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="scroll-cue">
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    <span class="scroll-label">Défiler</span>
+  </div>
+</section>
+
+<!-- =============================================
+     MISSION
+     ============================================= -->
+<section id="mission" class="section">
+  <div class="container">
+
+    <div class="mission-header reveal">
+      <div class="chip chip-teal">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l2 2"/></svg>
+        Notre mission
+      </div>
+      <h2 class="display-lg">Rendre le numérique <span class="gradient-text">vraiment accessible</span></h2>
+      <p class="body-lg" style="color:var(--text-muted)">Nous croyons que chacun mérite d'être accompagné dans sa transition numérique — sans jargon, sans pression, avec bienveillance et expertise.</p>
+    </div>
+
+    <div class="mission-grid">
+      <div class="mission-card reveal delay-1">
+        <div class="mc-icon mc-icon-1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <div class="mc-title">Humain avant tout</div>
+        <div class="mc-desc">Chaque personne est unique. Nos accompagnements s'adaptent à votre niveau, votre rythme et vos besoins sans jamais vous laisser de côté.</div>
+      </div>
+
+      <div class="mission-card reveal delay-2">
+        <div class="mc-icon mc-icon-2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+        </div>
+        <div class="mc-title">Simple & efficace</div>
+        <div class="mc-desc">Nous traduisons la complexité numérique en solutions claires, concrètes et immédiatement applicables dans votre quotidien professionnel ou personnel.</div>
+      </div>
+
+      <div class="mission-card reveal delay-3">
+        <div class="mc-icon mc-icon-3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
+          </svg>
+        </div>
+        <div class="mc-title">Solidaire & inclusif</div>
+        <div class="mc-desc">Notre communauté prône la solidarité numérique. Personne n'est trop âgé, trop débutant ou trop éloigné pour apprendre et progresser.</div>
+      </div>
+    </div>
+
+    <!-- Banner -->
+    <div class="mission-banner reveal">
+      <div>
+        <div class="mb-title">Chaque citoyen mérite d'être acteur de sa vie numérique</div>
+        <div class="mb-desc">Code & Connexion agit localement et en ligne pour réduire la fracture numérique, en offrant des outils, des formations et une communauté bienveillante à ceux qui en ont besoin.</div>
+      </div>
+      <div class="mb-stats">
+        <div class="mb-stat">
+          <div class="mb-stat-num gradient-text">98%</div>
+          <div class="mb-stat-label">Satisfaction</div>
+        </div>
+        <div class="mb-stat">
+          <div class="mb-stat-num gradient-text">0€</div>
+          <div class="mb-stat-label">Pour commencer</div>
+        </div>
+        <div class="mb-stat">
+          <div class="mb-stat-num gradient-text">∞</div>
+          <div class="mb-stat-label">Bienveillance</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =============================================
+     SERVICES
+     ============================================= -->
+<section id="services" class="section">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <div class="chip chip-teal">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        Nos services
+      </div>
+      <h2 class="display-lg">Ce que nous faisons <span class="gradient-text">pour vous</span></h2>
+      <p class="body-lg">Quatre piliers d'action pour vous accompagner vers une autonomie numérique durable, quel que soit votre point de départ.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card sc-1 reveal delay-1">
+        <div class="sc-bg-orb"></div>
+        <div class="sc-number">01 · Former</div>
+        <div class="sc-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <div class="sc-title">Ateliers & formations accessibles</div>
+        <div class="sc-desc">Des sessions pratiques en présentiel ou en ligne, adaptées à tous les niveaux — de la première adresse e-mail à la création d'une application web. Formats courts, conviviaux et progressifs.</div>
+        <a href="#contact" class="sc-link">
+          En savoir plus
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+
+      <div class="service-card sc-2 reveal delay-2">
+        <div class="sc-bg-orb"></div>
+        <div class="sc-number">02 · Accompagner</div>
+        <div class="sc-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <div class="sc-title">Accompagnement personnalisé</div>
+        <div class="sc-desc">Un suivi sur mesure : création de site, gestion des réseaux sociaux, sécurité en ligne, outils IA... Un bénévole dédié, à votre écoute, à votre rythme, sans pression.</div>
+        <a href="#contact" class="sc-link">
+          En savoir plus
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+
+      <div class="service-card sc-3 reveal delay-1">
+        <div class="sc-bg-orb"></div>
+        <div class="sc-number">03 · Connecter</div>
+        <div class="sc-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+          </svg>
+        </div>
+        <div class="sc-title">Échanges & communauté numérique</div>
+        <div class="sc-desc">Rejoignez une communauté active de passionnés, de débutants et d'experts qui partagent, s'entraident et grandissent ensemble — sur Discord, en meetups, et via des projets collaboratifs.</div>
+        <a href="#communaute" class="sc-link">
+          Rejoindre la communauté
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+
+      <div class="service-card sc-4 reveal delay-2">
+        <div class="sc-bg-orb"></div>
+        <div class="sc-number">04 · Autonomiser</div>
+        <div class="sc-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+        </div>
+        <div class="sc-title">Rendre les utilisateurs autonomes</div>
+        <div class="sc-desc">L'objectif ultime : que vous n'ayez plus besoin de nous pour les tâches du quotidien. Nous vous donnons les clés, les méthodes et la confiance pour naviguer seul dans le monde numérique.</div>
+        <a href="#contact" class="sc-link">
+          En savoir plus
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     PUBLICS
+     ============================================= -->
+<section id="publics" class="section" style="position:relative;overflow:hidden">
+  <div class="publics-bg-glow" style="background:radial-gradient(circle,rgba(0,212,200,0.12) 0%,transparent 70%);top:0;right:-100px"></div>
+  <div class="publics-bg-glow" style="background:radial-gradient(circle,rgba(78,204,163,0.10) 0%,transparent 70%);bottom:-100px;left:-100px;animation-delay:-8s"></div>
+
+  <div class="container" style="position:relative;z-index:1">
+    <div class="section-header reveal">
+      <div class="chip chip-white">👥 Nos publics</div>
+      <h2 class="display-lg">Pour <span class="gradient-text">chacun d'entre vous</span></h2>
+      <p class="body-lg">Quel que soit votre profil, nous avons un accompagnement conçu sur mesure pour vous.</p>
+    </div>
+
+    <div class="publics-grid">
+
+      <div class="public-card reveal delay-1">
+        <span class="pc-emoji">🏛️</span>
+        <div class="pc-title">Associations</div>
+        <div class="pc-desc">Passez votre asso au numérique : communication, gestion, site web, outils collaboratifs. Nous formons vos bénévoles et accompagnons vos équipes pas à pas.</div>
+        <div class="pc-badge">⭐ 40+ associations aidées</div>
+      </div>
+
+      <div class="public-card reveal delay-2">
+        <span class="pc-emoji">👩‍💻</span>
+        <div class="pc-title">Citoyens</div>
+        <div class="pc-desc">Seniors, parents, personnes éloignées du numérique… Nous vous guidons sans jugement, pour que le digital devienne un outil et non un obstacle dans votre quotidien.</div>
+        <div class="pc-badge">⭐ 60+ personnes accompagnées</div>
+      </div>
+
+      <div class="public-card reveal delay-3">
+        <span class="pc-emoji">🚀</span>
+        <div class="pc-title">Entrepreneurs</div>
+        <div class="pc-desc">Artisans, commerçants, freelances : lancez votre présence en ligne, automatisez des tâches, trouvez les bons outils pour développer votre activité sereinement.</div>
+        <div class="pc-badge">⭐ 20+ projets accompagnés</div>
+      </div>
+
+    </div>
+
+    <!-- Progress Bars -->
+    <div class="progress-section reveal">
+      <div class="progress-title">Satisfaction de nos membres · Résultats 2024</div>
+      <div class="progress-bars">
+        <div class="pb-row">
+          <span class="pb-label">Accessibilité</span>
+          <div class="pb-track"><div class="pb-fill" data-width="0.97"></div></div>
+          <span class="pb-pct">97%</span>
+        </div>
+        <div class="pb-row">
+          <span class="pb-label">Pédagogie</span>
+          <div class="pb-track"><div class="pb-fill" data-width="0.98"></div></div>
+          <span class="pb-pct">98%</span>
+        </div>
+        <div class="pb-row">
+          <span class="pb-label">Bienveillance</span>
+          <div class="pb-track"><div class="pb-fill" data-width="1"></div></div>
+          <span class="pb-pct">100%</span>
+        </div>
+        <div class="pb-row">
+          <span class="pb-label">Recommandation</span>
+          <div class="pb-track"><div class="pb-fill" data-width="0.96"></div></div>
+          <span class="pb-pct">96%</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =============================================
+     DISCORD / COMMUNITY
+     ============================================= -->
+<section id="communaute" class="section">
+  <div class="container">
+
+    <div class="discord-wrapper reveal">
+      <div class="discord-inner-glow"></div>
+      <div class="discord-inner-glow-2"></div>
+
+      <div class="discord-grid">
+        <div class="discord-left">
+          <div class="discord-online">
+            <div class="online-dot"></div>
+            <span class="online-text">Communauté active en ce moment</span>
+          </div>
+
+          <div class="chip chip-white" style="margin-bottom:22px">
+            🎮 Serveur Discord officiel
+          </div>
+
+          <h2 class="display-md" style="color:white;margin-bottom:18px">Rejoignez notre espace d'entraide</h2>
+          <p>Un espace d'échange, de partage et d'entraide ouvert 24h/24. Posez vos questions, partagez vos projets, découvrez des ressources et rencontrez des personnes qui partagent vos défis numériques.</p>
+
+          <div class="discord-features">
+            <div class="df-item"><span class="df-icon">💬</span> Canaux thématiques</div>
+            <div class="df-item"><span class="df-icon">🎓</span> Ressources partagées</div>
+            <div class="df-item"><span class="df-icon">🔔</span> Événements en avant-première</div>
+            <div class="df-item"><span class="df-icon">🤝</span> Entraide instantanée</div>
+            <div class="df-item"><span class="df-icon">🎯</span> Projets collaboratifs</div>
+            <div class="df-item"><span class="df-icon">🌍</span> Communauté internationale</div>
+          </div>
+
+          <div class="discord-cta-row">
+            <a href="https://discord.gg/6H5QD84zZR" target="_blank" rel="noopener" class="btn btn-discord btn-lg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.317 4.492c-1.53-.69-3.17-1.2-4.885-1.49a.075.075 0 0 0-.079.036c-.21.369-.444.85-.608 1.23a18.566 18.566 0 0 0-5.487 0 12.36 12.36 0 0 0-.617-1.23A.077.077 0 0 0 8.562 3c-1.714.29-3.354.8-4.885 1.491a.07.07 0 0 0-.032.027C.533 9.093-.32 13.555.099 17.961a.08.08 0 0 0 .031.055 20.03 20.03 0 0 0 5.993 2.98.078.078 0 0 0 .084-.026c.462-.62.874-1.275 1.226-1.963.021-.04.001-.088-.041-.104a13.201 13.201 0 0 1-1.872-.878.075.075 0 0 1-.008-.125c.126-.093.252-.19.372-.287a.075.075 0 0 1 .078-.01c3.927 1.764 8.18 1.764 12.061 0a.075.075 0 0 1 .079.009c.12.098.245.195.372.288a.075.075 0 0 1-.006.125c-.598.344-1.22.635-1.873.877a.075.075 0 0 0-.041.105c.36.687.772 1.341 1.225 1.962a.077.077 0 0 0 .084.028 19.963 19.963 0 0 0 6.002-2.981.076.076 0 0 0 .032-.054c.5-5.094-.838-9.52-3.549-13.442a.06.06 0 0 0-.031-.028z"/>
+              </svg>
+              Rejoindre le Discord
+            </a>
+            <span class="discord-link-text">discord.gg/6H5QD84zZR</span>
+          </div>
+        </div>
+
+        <div class="discord-right">
+          <div class="qr-card">
+            <div id="qr-main"></div>
+            <div class="qr-label-inner">Scanner pour rejoindre</div>
+          </div>
+          <div class="qr-subtitle">📱 Scannez ce QR code pour rejoindre directement notre serveur Discord</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =============================================
+     RÉSEAU
+     ============================================= -->
+<section id="reseau" class="section">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <div class="chip chip-teal">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="12" cy="12" r="2"/><circle cx="4" cy="6" r="2"/><circle cx="20" cy="6" r="2"/>
+          <circle cx="4" cy="18" r="2"/><circle cx="20" cy="18" r="2"/>
+          <line x1="6" y1="6" x2="10" y2="11"/><line x1="14" y1="11" x2="18" y2="6"/>
+          <line x1="6" y1="18" x2="10" y2="13"/><line x1="14" y1="13" x2="18" y2="18"/>
+        </svg>
+        Réseau & événements
+      </div>
+      <h2 class="display-lg">Un réseau <span class="gradient-text">qui crée des ponts</span></h2>
+      <p class="body-lg">Développeurs, créatifs, citoyens : tous réunis autour d'événements et de projets qui ont du sens et créent des liens durables.</p>
+    </div>
+
+    <div class="network-grid">
+
+      <div class="network-card reveal delay-1">
+        <div class="nc-top">
+          <div class="nc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <span class="nc-type nc-type-irl">IRL</span>
+        </div>
+        <div class="nc-title">Meetups en présentiel</div>
+        <div class="nc-desc">Des rencontres régulières en Normandie pour coder ensemble, partager des retours d'expérience et créer de vraies connexions humaines autour du numérique et de l'innovation.</div>
+        <div class="nc-tags">
+          <span class="nc-tag">📍 Normandie</span>
+          <span class="nc-tag">☕ Convivial</span>
+          <span class="nc-tag">🗓 Réguliers</span>
+        </div>
+      </div>
+
+      <div class="network-card reveal delay-2">
+        <div class="nc-top">
+          <div class="nc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <span class="nc-type nc-type-online">Online</span>
+        </div>
+        <div class="nc-title">Meetups en ligne</div>
+        <div class="nc-desc">Des sessions virtuelles accessibles de partout, avec des intervenants experts, des ateliers pratiques et des discussions ouvertes sur les grands enjeux du numérique.</div>
+        <div class="nc-tags">
+          <span class="nc-tag">🌍 Partout</span>
+          <span class="nc-tag">🎙 Speakers</span>
+          <span class="nc-tag">📹 Replay</span>
+        </div>
+      </div>
+
+      <div class="network-card reveal delay-3">
+        <div class="nc-top">
+          <div class="nc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <span class="nc-type nc-type-project">Projets</span>
+        </div>
+        <div class="nc-title">Collaboration à impact</div>
+        <div class="nc-desc">Rejoignez des projets concrets au service de la société civile : outils pour associations, sites pour commerçants locaux, applications à impact social positif.</div>
+        <div class="nc-tags">
+          <span class="nc-tag">💡 Open Source</span>
+          <span class="nc-tag">🏆 Impact</span>
+          <span class="nc-tag">🛠 Concret</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Network Visualizer -->
+    <div class="network-visual reveal">
+      <canvas id="network-canvas"></canvas>
+    </div>
+
+  </div>
+</section>
+
+<!-- =============================================
+     CALENDRIER DES ATELIERS
+     ============================================= -->
+<section id="ateliers" class="section">
+  <div class="container">
+
+    <div class="ateliers-header reveal">
+      <div class="chip chip-teal">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Calendrier des ateliers
+      </div>
+      <h2 class="display-lg">Prochains <span class="gradient-text">ateliers</span></h2>
+      <p class="body-lg">Inscrivez-vous directement en ligne. Places limitées, entrée libre, bienveillance garantie.</p>
+    </div>
+
+    <div class="ateliers-filters reveal">
+      <button class="filter-btn active" data-filter="all">Tous les ateliers</button>
+      <button class="filter-btn" data-filter="debutant">Débutant</button>
+      <button class="filter-btn" data-filter="intermediaire">Intermédiaire</button>
+      <button class="filter-btn" data-filter="avance">Avancé</button>
+      <button class="filter-btn" data-filter="tous">Tous niveaux</button>
+    </div>
+
+    <div class="ateliers-grid" id="ateliers-grid">
+
+      <div class="atelier-card reveal delay-1" data-niveau="debutant">
+        <div class="atelier-header-band" style="background:linear-gradient(135deg,rgba(78,204,163,0.10),rgba(78,204,163,0.04))">
+          <span class="atelier-emoji">📧</span>
+          <span class="atelier-niveau niveau-debutant">Débutant</span>
+        </div>
+        <div class="atelier-body">
+          <div class="atelier-title">Maîtriser sa boîte e-mail</div>
+          <div class="atelier-desc">Créer, organiser et sécuriser votre messagerie. De Gmail à Outlook, prenez confiance en quelques heures.</div>
+          <div class="atelier-meta">
+            <div class="atelier-meta-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Samedi 22 juin 2025 · 10h–12h
+            </div>
+            <div class="atelier-meta-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 1 8 8c0 5-8 14-8 14S4 15 4 10a8 8 0 0 1 8-8z"/></svg>
+              Médiathèque de Rouen · Salle B
+            </div>
+            <div class="atelier-meta-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              2h · Gratuit
+            </div>
+          </div>
+          <div class="atelier-footer">
+            <div class="atelier-places"><span class="places-num">7</span> / 12 places restantes</div>
+            <button class="btn-inscrire" onclick="openModal({titre:'Maîtriser sa boîte e-mail',date:'Samedi 22 juin · 10h–12h',lieu:'Médiathèque de Rouen · Salle B',emoji:'📧',id:'email-juin'})">S'inscrire →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="atelier-card reveal delay-2" data-niveau="tous">
+        <div class="atelier-header-band" style="background:linear-gradient(135deg,rgba(245,165,60,0.10),rgba(245,165,60,0.04))">
+          <span class="atelier-emoji">🤖</span>
+          <span class="atelier-niveau niveau-tous">Tous niveaux</span>
+        </div>
+        <div class="atelier-body">
+          <div class="atelier-title">IA pour tous : démystifier ChatGPT</div>
+          <div class="atelier-desc">Comprendre et utiliser l'intelligence artificielle au quotidien, sans être expert. Cas pratiques concrets.</div>
+          <div class="atelier-meta">
+            <div class="atelier-meta-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Mercredi 25 juin 2025 · 18h–20h
+            </div>
+            <div class="atelier-meta-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              En ligne · Lien envoyé par email
+            </div>
+            <div class="atelier-meta-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              2h · Gratuit
+            </div>
+          </div>
+          <div class="atelier-footer">
+            <div class="atelier-places"><span class="places-num">3</span> / 20 places restantes</div>
+            <button class="btn-inscrire" onclick="openModal({titre:'IA pour tous : démystifier ChatGPT',date:'Mercredi 25 juin · 18h–20h',lieu:'En ligne',emoji:'🤖',id:'ia-juin'})">S'inscrire →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="atelier-card reveal delay-3" data-niveau="intermediaire">
+        <div class="atelier-header-band" style="background:linear-gradient(135deg,rgba(0,212,200,0.10),rgba(0,212,200,0.04))">
+          <span class="atelier-emoji">🌐</span>
+          <span class="atelier-niveau niveau-intermediaire">Intermédiaire</span>
+        </div>
+        <div class="atelier-body">
+          <div class="atelier-title">Créer son site avec WordPress</div>
+          <div class="atelier-desc">Installation, thème, pages, plugin de contact. Repartez avec un site fonctionnel en une journée.</div>
+          <div class="atelier-meta">
+            <div class="atelier-meta-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Samedi 29 juin 2025 · 9h–17h
+            </div>
+            <div class="atelier-meta-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 1 8 8c0 5-8 14-8 14S4 15 4 10a8 8 0 0 1 8-8z"/></svg>
+              Espace coworking Le Hub · Rouen
+            </div>
+            <div class="atelier-meta-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              8h · Tarif solidaire 10 €
+            </div>
+          </div>
+          <div class="atelier-footer">
+            <div class="atelier-places"><span class="places-num">2</span> / 8 places restantes</div>
+            <button class="btn-inscrire" onclick="openModal({titre:'Créer son site avec WordPress',date:'Samedi 29 juin · 9h–17h',lieu:'Le Hub · Rouen',emoji:'🌐',id:'wordpress-juin'})">S'inscrire →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="atelier-card reveal delay-1" data-niveau="debutant">
+        <div class="atelier-header-band" style="background:linear-gradient(135deg,rgba(78,204,163,0.10),rgba(78,204,163,0.04))">
+          <span class="atelier-emoji">📱</span>
+          <span class="atelier-niveau niveau-debutant">Débutant</span>
+        </div>
+        <div class="atelier-body">
+          <div class="atelier-title">Smartphone : prise en main complète</div>
+          <div class="atelier-desc">Applications, appareil photo, sécurité, mises à jour. Apprenez à maîtriser votre téléphone pas à pas.</div>
+          <div class="atelier-meta">
+            <div class="atelier-meta-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Mardi 1er juillet 2025 · 14h–16h
+            </div>
+            <div class="atelier-meta-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 1 8 8c0 5-8 14-8 14S4 15 4 10a8 8 0 0 1 8-8z"/></svg>
+              CCAS de Rouen · Salle polyvalente
+            </div>
+            <div class="atelier-meta-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              2h · Gratuit
+            </div>
+          </div>
+          <div class="atelier-footer">
+            <div class="atelier-places"><span class="places-num">10</span> / 10 places restantes</div>
+            <button class="btn-inscrire" onclick="openModal({titre:'Smartphone : prise en main complète',date:'Mardi 1er juillet · 14h–16h',lieu:'CCAS de Rouen · Salle polyvalente',emoji:'📱',id:'smartphone-juillet'})">S'inscrire →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="atelier-card reveal delay-2" data-niveau="avance">
+        <div class="atelier-header-band" style="background:linear-gradient(135deg,rgba(88,101,242,0.12),rgba(88,101,242,0.04))">
+          <span class="atelier-emoji">⚙️</span>
+          <span class="atelier-niveau niveau-avance">Avancé</span>
+        </div>
+        <div class="atelier-body">
+          <div class="atelier-title">Automatisations avec n8n & Make</div>
+          <div class="atelier-desc">Connectez vos outils, automatisez vos tâches répétitives. Zéro code, 100% efficace pour votre quotidien.</div>
+          <div class="atelier-meta">
+            <div class="atelier-meta-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Jeudi 3 juillet 2025 · 18h30–21h
+            </div>
+            <div class="atelier-meta-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              En ligne · Discord
+            </div>
+            <div class="atelier-meta-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              2h30 · Gratuit membres
+            </div>
+          </div>
+          <div class="atelier-footer">
+            <div class="atelier-places"><span class="places-num">5</span> / 15 places restantes</div>
+            <button class="btn-inscrire" onclick="openModal({titre:'Automatisations avec n8n & Make',date:'Jeudi 3 juillet · 18h30–21h',lieu:'En ligne · Discord',emoji:'⚙️',id:'automation-juillet'})">S'inscrire →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="atelier-card complet reveal delay-3" data-niveau="tous">
+        <div class="atelier-header-band" style="background:linear-gradient(135deg,rgba(200,200,200,0.10),rgba(200,200,200,0.04))">
+          <span class="atelier-emoji">🛡️</span>
+          <span class="atelier-niveau niveau-tous">Tous niveaux</span>
+        </div>
+        <div class="atelier-body">
+          <div class="atelier-title">Cybersécurité du quotidien</div>
+          <div class="atelier-desc">Mots de passe, arnaques, phishing, Wi-Fi public : protégez-vous efficacement contre les menaces numériques.</div>
+          <div class="atelier-meta">
+            <div class="atelier-meta-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Samedi 14 juin 2025 · 10h–12h
+            </div>
+            <div class="atelier-meta-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 1 8 8c0 5-8 14-8 14S4 15 4 10a8 8 0 0 1 8-8z"/></svg>
+              Médiathèque de Rouen
+            </div>
+            <div class="atelier-meta-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              2h · Gratuit
+            </div>
+          </div>
+          <div class="atelier-footer">
+            <div class="atelier-places"><span class="complet-label">⚡ Complet</span> — liste d'attente</div>
+            <button class="btn-inscrire" onclick="openModal({titre:'Cybersécurité du quotidien',date:'Samedi 14 juin · 10h–12h',lieu:'Médiathèque de Rouen',emoji:'🛡️',id:'cyber-juin',attente:true})">Liste d'attente</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MODAL INSCRIPTION -->
+<div class="modal-overlay" id="inscriptionModal">
+  <div class="modal-box" id="modalBox">
+    <button class="modal-close" id="modalClose" aria-label="Fermer">✕</button>
+    <div id="modalContent">
+      <!-- rempli dynamiquement -->
+    </div>
+  </div>
+</div>
+
+<!-- =============================================
+     BENEFITS
+     ============================================= -->
+<section id="benefices" class="section">
+  <div class="container">
+
+    <div class="section-header reveal" style="text-align:center;max-width:600px;margin-left:auto;margin-right:auto">
+      <div class="chip chip-teal">🎁 Bénéfices</div>
+      <h2 class="display-lg">Ce que vous <span class="gradient-text">y gagnez</span></h2>
+      <p class="body-lg">Rejoindre Code & Connexion, c'est investir dans vos compétences, votre réseau et votre avenir numérique.</p>
+    </div>
+
+    <div class="benefits-grid">
+
+      <div class="benefit-card reveal delay-1">
+        <div class="bc-icon-ring">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div class="bc-title">Gagner du temps</div>
+        <div class="bc-desc">Maîtrisez les bons outils numériques pour automatiser, simplifier et accélérer vos tâches du quotidien.</div>
+      </div>
+
+      <div class="benefit-card reveal delay-2">
+        <div class="bc-icon-ring">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <div class="bc-title">Monter en compétences</div>
+        <div class="bc-desc">Formations progressives sur le web, la bureautique, la cybersécurité, les outils IA et bien plus encore.</div>
+      </div>
+
+      <div class="benefit-card reveal delay-3">
+        <div class="bc-icon-ring">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <div class="bc-title">Communauté bienveillante</div>
+        <div class="bc-desc">Accédez à un réseau actif de personnes qui partagent, s'entraident et évoluent ensemble sans jugement.</div>
+      </div>
+
+      <div class="benefit-card reveal delay-4">
+        <div class="bc-icon-ring">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </div>
+        <div class="bc-title">Développer vos projets</div>
+        <div class="bc-desc">Bénéficiez d'un regard expert et d'une équipe engagée pour concrétiser vos idées numériques, de A à Z.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     TESTIMONIALS
+     ============================================= -->
+<section id="temoignages" class="section">
+  <div class="container">
+
+    <div class="section-header reveal" style="text-align:center;max-width:580px;margin-left:auto;margin-right:auto">
+      <div class="chip chip-teal">💬 Témoignages</div>
+      <h2 class="display-lg">Ce qu'ils <span class="gradient-text">disent de nous</span></h2>
+    </div>
+
+    <div class="testi-grid">
+
+      <div class="testi-card reveal delay-1">
+        <div class="testi-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <div class="testi-quote">
+          <blockquote>Grâce à Code & Connexion, j'ai pu créer le site de mon association en quelques semaines. L'accompagnement était patient, clair et vraiment adapté à mon niveau de débutante absolue.</blockquote>
+        </div>
+        <div class="testi-author">
+          <div class="testi-avatar">M</div>
+          <div>
+            <div class="testi-name">Marie L.</div>
+            <div class="testi-role">Présidente d'association · 58 ans</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal delay-2">
+        <div class="testi-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <div class="testi-quote">
+          <blockquote>Le Discord de Code & Connexion est une vraie mine d'or. En quelques minutes j'ai toujours une réponse à mes questions. La communauté est incroyablement bienveillante et compétente.</blockquote>
+        </div>
+        <div class="testi-author">
+          <div class="testi-avatar">T</div>
+          <div>
+            <div class="testi-name">Thomas R.</div>
+            <div class="testi-role">Développeur junior · 24 ans</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal delay-3">
+        <div class="testi-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <div class="testi-quote">
+          <blockquote>J'avais peur du numérique à 67 ans. Aujourd'hui je commande en ligne, fais mes démarches seul et j'ai même configuré mon smartphone. Je n'aurais pas cru ça possible. Merci infiniment !</blockquote>
+        </div>
+        <div class="testi-author">
+          <div class="testi-avatar">J</div>
+          <div>
+            <div class="testi-name">Jean-Pierre D.</div>
+            <div class="testi-role">Retraité · 67 ans</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     CONTACT
+     ============================================= -->
+<section id="contact" class="section">
+  <div class="container">
+
+    <div class="contact-grid">
+
+      <div class="contact-left reveal-left">
+        <div class="chip chip-teal" style="margin-bottom:20px">📬 Nous contacter</div>
+        <h2 class="display-lg" style="margin-bottom:20px">Parlons de votre <span class="gradient-text">projet</span></h2>
+        <p class="body-lg" style="margin-bottom:36px">Une question, un besoin, une idée ? Nous sommes là pour vous écouter et trouver la meilleure façon de vous accompagner.</p>
+        <div class="contact-details">
+          <div class="cd-item">
+            <div class="cd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9c1.27 2.17 2.89 3.79 5.07 5.07l1.15-.95a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 21 16.92z"/></svg></div>
+            <a href="tel:0700000000" class="cd-text" style="text-decoration:none">07 00 00 00 00</a>
+          </div>
+          <div class="cd-item">
+            <div class="cd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <a href="mailto:contact@code-connexion.fr" class="cd-text" style="text-decoration:none">contact@code-connexion.fr</a>
+          </div>
+          <div class="cd-item">
+            <div class="cd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <a href="http://www.code-connexion.fr" target="_blank" class="cd-text" style="text-decoration:none">www.code-connexion.fr</a>
+          </div>
+          <div class="cd-item">
+            <div class="cd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <span class="cd-text">12 Rue des Solutions, 31000 Toulouse · & en ligne</span>
+          </div>
+          <a href="https://discord.gg/6H5QD84zZR" target="_blank" class="cd-item" style="text-decoration:none">
+            <div class="cd-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.317 4.492c-1.53-.69-3.17-1.2-4.885-1.49a.075.075 0 0 0-.079.036c-.21.369-.444.85-.608 1.23a18.566 18.566 0 0 0-5.487 0 12.36 12.36 0 0 0-.617-1.23A.077.077 0 0 0 8.562 3c-1.714.29-3.354.8-4.885 1.491a.07.07 0 0 0-.032.027C.533 9.093-.32 13.555.099 17.961a.08.08 0 0 0 .031.055 20.03 20.03 0 0 0 5.993 2.98.078.078 0 0 0 .084-.026c.462-.62.874-1.275 1.226-1.963.021-.04.001-.088-.041-.104a13.201 13.201 0 0 1-1.872-.878.075.075 0 0 1-.008-.125c.126-.093.252-.19.372-.287a.075.075 0 0 1 .078-.01c3.927 1.764 8.18 1.764 12.061 0a.075.075 0 0 1 .079.009c.12.098.245.195.372.288a.075.075 0 0 1-.006.125c-.598.344-1.22.635-1.873.877a.075.075 0 0 0-.041.105c.36.687.772 1.341 1.225 1.962a.077.077 0 0 0 .084.028 19.963 19.963 0 0 0 6.002-2.981.076.076 0 0 0 .032-.054c.5-5.094-.838-9.52-3.549-13.442a.06.06 0 0 0-.031-.028z"/></svg>
+            </div>
+            <span class="cd-text">discord.gg/6H5QD84zZR</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-card reveal-right">
+        <div class="cf-title">Envoyer un message ✉️</div>
+        <!--
+          FORMSPREE — Pour activer :
+          1. Créez un compte gratuit sur https://formspree.io
+          2. Créez un nouveau formulaire → copiez l'ID (ex: xwkgpqzb)
+          3. Remplacez YOUR_FORM_ID ci-dessous par votre ID
+          Formspree gère l'envoi par email, la protection anti-spam et le RGPD.
+        -->
+        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Nouveau message — Code & Connexion">
+          <input type="hidden" name="_language" value="fr">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="cf-prenom">Prénom *</label>
+              <input class="form-input" id="cf-prenom" name="prenom" type="text" placeholder="Votre prénom" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-nom">Nom *</label>
+              <input class="form-input" id="cf-nom" name="nom" type="text" placeholder="Votre nom" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-email">Adresse e-mail *</label>
+            <input class="form-input" id="cf-email" name="email" type="email" placeholder="votre@email.fr" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-profil">Vous êtes…</label>
+            <select class="form-select" id="cf-profil" name="profil">
+              <option value="">Choisir votre profil</option>
+              <option>Un citoyen particulier</option>
+              <option>Un entrepreneur / freelance</option>
+              <option>Une association</option>
+              <option>Un développeur</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-message">Votre message *</label>
+            <textarea class="form-textarea" id="cf-message" name="message" placeholder="Décrivez votre besoin, votre projet ou votre question…" required></textarea>
+          </div>
+          <!-- Honeypot anti-spam Formspree -->
+          <input type="text" name="_gotcha" style="display:none">
+          <button class="form-submit" id="formSubmitBtn" type="submit">
+            <span id="formBtnText">Envoyer le message</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <div id="formFeedback" style="display:none;margin-top:14px;padding:14px 18px;border-radius:var(--radius-sm);font-size:0.90rem;font-weight:600;text-align:center"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     FOOTER
+     ============================================= -->
+<footer>
+  <div class="footer-glow"></div>
+  <div class="container" style="position:relative;z-index:1">
+
+    <div class="footer-top">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="logo-badge" style="margin-bottom:20px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;color:#071330">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <p>Association loi 1901 dédiée à l'accompagnement numérique accessible, solidaire et humain pour tou·te·s.</p>
+        <div class="footer-socials">
+          <a href="https://discord.gg/6H5QD84zZR" target="_blank" class="social-link" title="Discord">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.492c-1.53-.69-3.17-1.2-4.885-1.49a.075.075 0 0 0-.079.036c-.21.369-.444.85-.608 1.23a18.566 18.566 0 0 0-5.487 0 12.36 12.36 0 0 0-.617-1.23A.077.077 0 0 0 8.562 3c-1.714.29-3.354.8-4.885 1.491a.07.07 0 0 0-.032.027C.533 9.093-.32 13.555.099 17.961a.08.08 0 0 0 .031.055 20.03 20.03 0 0 0 5.993 2.98.078.078 0 0 0 .084-.026c.462-.62.874-1.275 1.226-1.963.021-.04.001-.088-.041-.104a13.201 13.201 0 0 1-1.872-.878.075.075 0 0 1-.008-.125c.126-.093.252-.19.372-.287a.075.075 0 0 1 .078-.01c3.927 1.764 8.18 1.764 12.061 0a.075.075 0 0 1 .079.009c.12.098.245.195.372.288a.075.075 0 0 1-.006.125c-.598.344-1.22.635-1.873.877a.075.075 0 0 0-.041.105c.36.687.772 1.341 1.225 1.962a.077.077 0 0 0 .084.028 19.963 19.963 0 0 0 6.002-2.981.076.076 0 0 0 .032-.054c.5-5.094-.838-9.52-3.549-13.442a.06.06 0 0 0-.031-.028z"/></svg>
+          </a>
+          <a href="#" class="social-link" title="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path fill="var(--navy-900)" d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="var(--navy-900)" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="#" class="social-link" title="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <div class="footer-links">
+          <a href="#mission">→ Notre mission</a>
+          <a href="#services">→ Nos services</a>
+          <a href="#publics">→ Nos publics</a>
+          <a href="#communaute">→ Communauté Discord</a>
+          <a href="#reseau">→ Réseau & événements</a>
+          <a href="#contact">→ Nous contacter</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Ressources</div>
+        <div class="footer-links">
+          <a href="#">→ Blog & actualités</a>
+          <a href="#">→ Ressources gratuites</a>
+          <a href="#">→ Devenir bénévole</a>
+          <a href="#">→ Calendrier des événements</a>
+          <a href="#">→ Mentions légales</a>
+          <a href="#">→ Politique de confidentialité</a>
+        </div>
+      </div>
+
+      <!-- Newsletter + QR -->
+      <div class="footer-newsletter">
+        <div class="footer-col-title">Newsletter</div>
+        <p>Recevez nos actualités, ateliers et ressources numériques chaque mois. Sans spam, promis.</p>
+        <!--
+          BREVO (ex-Sendinblue) — Pour activer :
+          1. Compte gratuit sur https://brevo.com
+          2. Contacts → Formulaires → Créer un formulaire → copiez l'ID de liste
+          3. Paramètres → SMTP & API → Créez une clé API
+          4. Remplacez VOTRE_CLE_API_BREVO et VOTRE_ID_LISTE ci-dessous
+          Plan gratuit : 300 emails/jour, contacts illimités.
+        -->
+        <div class="nl-form">
+          <input class="nl-input" type="email" id="nlEmail" placeholder="Votre email">
+          <button class="nl-btn" id="nlBtn">OK →</button>
+        </div>
+        <div id="nlFeedback" style="display:none;font-size:0.80rem;margin-top:-14px;margin-bottom:14px;padding:10px 14px;border-radius:8px"></div>
+        <div class="footer-qr-mini">
+          <div class="qr-mini-box">
+            <div id="qr-footer"></div>
+          </div>
+          <div class="qr-mini-text">
+            <strong>Discord · QR Code</strong>
+            Rejoignez notre communauté en scannant ce code
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Code & Connexion · Association loi 1901</span>
+      <div class="footer-slogan">
+        « Le numérique n'est pas une question d'âge, mais une question d'<em>envie</em>. »
+      </div>
+      <span class="footer-copy">Fait avec ❤️ en Normandie</span>
+    </div>
+
+  </div>
+</footer>
+
+<!-- =============================================
+     JAVASCRIPT
+     ============================================= -->
+<script src="script.js"></script>
+</body>
+</html>
