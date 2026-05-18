@@ -604,3 +604,111 @@ modalOverlay.addEventListener('click', function(e) {
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeModal();
 });
+
+// ─── FAQ ACCORDÉON ───────────────────────────────────────────────
+(function() {
+  const items = document.querySelectorAll('.faq-item');
+  items.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer   = item.querySelector('.faq-answer');
+    // Set initial height for the open item
+    if (item.classList.contains('open')) {
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+    question.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      // Close all
+      items.forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-answer').style.maxHeight = '0';
+      });
+      // Open clicked if it was closed
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+})();
+
+// ─── DISCORD MEMBRES EN TEMPS RÉEL ───────────────────────────────
+// L'API Discord Widget est publique et ne nécessite aucune clé.
+// Pour l'activer sur votre serveur :
+//   Discord → Paramètres du serveur → Widget → Activer le widget
+// Remplacez VOTRE_SERVER_ID ci-dessous par l'ID numérique de votre serveur.
+(async function() {
+  const SERVER_ID = 'VOTRE_SERVER_ID'; // ex: '1234567890123456789'
+
+  // Éléments à mettre à jour
+  const memberCountEl  = document.getElementById('discord-member-count');
+  const onlineHeroEl   = document.getElementById('discord-online-hero');
+  const carteCountEl   = document.getElementById('carte-member-count');
+
+  if (!SERVER_ID || SERVER_ID === 'VOTRE_SERVER_ID') {
+    // Mode démo : valeurs statiques affichées
+    if (onlineHeroEl) onlineHeroEl.textContent = '12 en ligne';
+    if (carteCountEl) carteCountEl.textContent = '120+ membres actifs';
+    return;
+  }
+
+  try {
+    const res  = await fetch(`https://discord.com/api/guilds/${SERVER_ID}/widget.json`);
+    if (!res.ok) throw new Error('Widget non activé');
+    const data = await res.json();
+
+    const total  = data.approximate_member_count ?? 120;
+    const online = data.approximate_presence_count ?? data.members?.length ?? 0;
+
+    // Mise à jour hero
+    if (memberCountEl) {
+      memberCountEl.setAttribute('data-target', total);
+      // Relancer l'animation counter sur cet élément
+      animateCounter(memberCountEl, 0, total, 1800);
+    }
+    if (onlineHeroEl) onlineHeroEl.textContent = `${online} en ligne`;
+
+    // Mise à jour carte badge
+    if (carteCountEl) carteCountEl.textContent = `${total}+ membres actifs`;
+
+  } catch (e) {
+    console.info('Discord widget non configuré — valeurs statiques affichées.');
+    if (onlineHeroEl) onlineHeroEl.textContent = '⚙️ Configurer le widget';
+  }
+
+  function animateCounter(el, start, end, duration) {
+    const startTime = performance.now();
+    function step(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(start + eased * (end - start));
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+})();
+
+// ─── CARTE — ZONES CLIQUABLES ─────────────────────────────────────
+(function() {
+  const zones   = document.querySelectorAll('.carte-zone');
+  const iframe  = document.querySelector('.carte-map-container iframe');
+  if (!zones.length || !iframe) return;
+
+  const coordsMap = {
+    rouen:  { bbox: '-1.0%2C49.3%2C1.5%2C49.6', marker: '49.4431%2C1.0993' },
+    caen:   { bbox: '-0.6%2C49.0%2C0.5%2C49.4',  marker: '49.1829%2C-0.3707' },
+    havre:  { bbox: '0.0%2C49.4%2C0.5%2C49.6',   marker: '49.4944%2C0.1079' },
+    online: { bbox: '-5.0%2C41.0%2C10.0%2C52.0', marker: '47.0%2C2.0' },
+  };
+
+  zones.forEach(zone => {
+    zone.addEventListener('click', () => {
+      zones.forEach(z => z.classList.remove('active'));
+      zone.classList.add('active');
+      const key = zone.dataset.zone;
+      const c   = coordsMap[key];
+      if (c) {
+        iframe.src = `https://www.openstreetmap.org/export/embed.html?bbox=${c.bbox}&layer=mapnik&marker=${c.marker}`;
+      }
+    });
+  });
+})();
